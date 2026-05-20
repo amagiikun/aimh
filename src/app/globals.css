@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FAF9F5;
+  --color-foreground: #2A2A2A;
+  --color-card: #FAF9F5;
+  --color-card-foreground: #2A2A2A;
+  --color-popover: #FAF9F5;
+  --color-popover-foreground: #2A2A2A;
+  --color-primary: #3F4E4F;
+  --color-primary-foreground: #FAF9F5;
+  --color-secondary: #A27B5C;
+  --color-secondary-foreground: #FAF9F5;
+  --color-muted: #F1EFE9;
+  --color-muted-foreground: #6F6F6F;
+  --color-accent: #E5E2D9;
+  --color-accent-foreground: #2A2A2A;
+  --color-destructive: #BC4F4F;
+  --color-destructive-foreground: #FAF9F5;
+  --color-border: #2A2A2A;
+  --color-input: #2A2A2A;
+  --color-ring: #2A2A2A;
+  --radius: 0.125rem;
+  --color-neo-yellow: #A27B5C;
+  --color-neo-cyan: #3F4E4F;
+  --color-neo-pink: #5A7B7C;
+  --shadow-neo: 1px 1px 4px 0px rgba(42, 42, 42, 0.04);
+  --shadow-neo-sm: 1px 1px 2px 0px rgba(42, 42, 42, 0.03);
+  --shadow-neo-lg: 2px 2px 6px 0px rgba(42, 42, 42, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #18181A;
+    --color-foreground: #E4E4E7;
+    --color-card: #18181A;
+    --color-card-foreground: #E4E4E7;
+    --color-popover: #18181A;
+    --color-popover-foreground: #E4E4E7;
+    --color-primary: #E4E4E7;
+    --color-primary-foreground: #18181A;
+    --color-secondary: #A27B5C;
+    --color-secondary-foreground: #E4E4E7;
+    --color-muted: #27272A;
+    --color-muted-foreground: #A1A1AA;
+    --color-accent: #27272A;
+    --color-accent-foreground: #E4E4E7;
+    --color-destructive: #7F1D1D;
+    --color-destructive-foreground: #E4E4E7;
+    --color-border: #3F3F46;
+    --color-input: #3F3F46;
+    --color-ring: #3F3F46;
+    --shadow-neo: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    --shadow-neo-sm: 1px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    --shadow-neo-lg: 2px 2px 6px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+}
+
+@layer utilities {
+  .bg-halftone {
+    background-image: linear-gradient(#2a2a2a03 1px, transparent 1px),
+                      linear-gradient(90deg, #2a2a2a03 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: Georgia, Cambria, "Times New Roman", Times, "Noto Serif SC", serif;
+}

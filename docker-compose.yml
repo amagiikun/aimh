@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  comicforge:
+    build: .
+    container_name: comicforge
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - COMICFORGE_PASSWORD=${COMICFORGE_PASSWORD:-}
+      - COMICFORGE_DATA_DIR=/data/projects
+    volumes:
+      - comicforge-data:/data/projects
+    restart: unless-stopped
+
+volumes:
+  comicforge-data:

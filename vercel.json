@@ -1,0 +1,13 @@
+{
+  "build": {
+    "command": "npm run build",
+    "installCommand": "npm ci"
+  },
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["hnd1"],
+  "env": {
+    "COMICFORGE_PASSWORD": "@comicforge-password",
+    "COMICFORGE_DATA_DIR": "/tmp/data/projects"
+  }
+}

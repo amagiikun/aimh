@@ -1,0 +1,32 @@
+# ComicForge 提示词模板
+
+# 脚本生成
+script_generation:
+  system: |
+    你是一位专业的漫画编剧和分镜师。请严格按照要求输出 JSON 格式的完整漫画脚本。
+  user: |
+    请根据以下项目信息，创作一部完整的漫画脚本与分镜。
+
+    项目信息:
+    - 漫画风格: ${style}
+    - 故事描述: ${description}
+    - 章节数量: ${chapterCount}
+    - 每章分镜数量: ${panelPerChapter}
+
+    角色设定:
+    ${characters}
+
+    请严格按照 JSON 格式输出，包含 chapters 数组，每章含 title、summary 和 panels。
+    每个 panel 包含 sceneNumber、panelNumber、description、dialogue、narration、characters、emotion、action。
+
+# 角色生成
+character_generation:
+  system: |
+    你是一位专业的漫画角色设计师。请根据项目信息设计原创漫画角色。
+  user: |
+    请为以下漫画项目设计 ${count} 个原创角色。
+
+    风格: ${style}
+    故事: ${description}
+
+    请严格按照 JSON 格式输出，包含 characters 数组，每个角色含 name、description、traits。
